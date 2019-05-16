@@ -350,7 +350,7 @@ namespace WixSharp
 
         internal void ResetWixGuidStartValue()
         {
-            WixGuid.ConsistentGenerationStartValue = this.ProductId ?? this.GUID ?? Guid.NewGuid();
+            WixGuid.ConsistentGenerationStartValue = this.GUID ?? this.ProductId ?? Guid.NewGuid();
         }
 
         internal void ResetAutoIdGeneration(bool supressWarning)
